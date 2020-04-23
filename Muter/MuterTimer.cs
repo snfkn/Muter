@@ -12,6 +12,7 @@ namespace Muter
     class MuterTimer
     {
         Timer timer;
+        const int TIME = 60000;
         CoreAudioDevice defaultPlaybackDevice;
         public MuterTimer()
         {
@@ -20,7 +21,7 @@ namespace Muter
 
         public void Start()
         {
-            timer = new Timer(60000);
+            timer = new Timer(TIME);
             timer.Elapsed += Mute;
             timer.Enabled = true;
         }
