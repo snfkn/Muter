@@ -24,11 +24,13 @@ namespace Muter
         public  void Start(object sender, EventArgs e)
         {
             muter.Start();
+            notifyIcon.Text = "Running";
         }
 
         public void Stop(object sender, EventArgs e)
         {
             muter.Stop();
+            notifyIcon.Text = "Stopped";
         }
 
         public void Close(object sender, EventArgs e)
